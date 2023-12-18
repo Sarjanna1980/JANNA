@@ -1,0 +1,57 @@
+<MyRoot>:
+    orientation: 'vertical'
+    Image:
+        source: 'images/calc.png'  # Replace with the path to your image file
+        size_hint_y: None
+        height: 400  # Adjust the height as needed
+    TextInput:
+        id: calc_field
+        readonly: True
+        disabled: True
+        font_size: 54
+
+    GridLayout:
+        rows: 6  # Set rows to 5 to include 4 rows of input and 1 row for buttons
+        cols:1
+        padding: 1
+        spacing: 5
+        height: 200
+        size_hint: 1, None
+
+        # Four TextInput widgets for input
+        TextInput:
+            id: input1
+            hint_text: "Wanted Concentration"
+            font_size: 26
+
+        TextInput:
+            id: input2
+            hint_text: "Current Concentration"
+            font_size: 26
+
+        TextInput:
+            id: input3
+            hint_text: "Current Volume"
+            font_size: 26
+
+        TextInput:
+            id: input4
+            hint_text: "Volume to be Add"
+            font_size: 26
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: 10
+        # Three buttons
+        Button:
+            text: "Submit"
+            font_size: 26
+            on_press: root.calc_symbol("Submit")
+
+        Button:
+            text: "Reset"
+            font_size: 26
+            on_press: root.calc_symbol("Reset")
+        Button:
+            text: "Close"
+            font_size: 26
+            on_press: root.calc_symbol("Close")
