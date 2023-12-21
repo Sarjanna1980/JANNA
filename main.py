@@ -23,7 +23,7 @@ class MyRoot(BoxLayout):
                 current_volume = float(self.input3.text)
 
                 if current_concentration != 0:
-                    volume_to_add = (current_concentration * current_volume) / wanted_concentration
+                    volume_to_add = (wanted_concentration * current_volume) / current_concentration
                     self.input4.text = str(volume_to_add)
                 else:
                     self.input4.text = "Error: Division by zero"
