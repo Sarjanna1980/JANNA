@@ -3,36 +3,73 @@
     Image:
         source: 'images/calc.png'  # Replace with the path to your image file
         size_hint_y: None
-        height: 300  # Adjust the height as needed
+        height: 600  # Adjust the height as needed
 
     GridLayout:
         rows: 4  # Set rows to 5 to include 4 rows of input and 1 row for buttons
-        cols:1
+        cols: 2
         padding: 1
         spacing: 5
         height: 600
         size_hint: 1, None
 
-        # Four TextInput widgets for input
-        TextInput:
-            id: input1
-            hint_text: "Wanted Concentration"
-            font_size: 46
+        # Four TextInput widgets and labels for input
+        GridLayout:
+            cols: 2
 
-        TextInput:
-            id: input2
-            hint_text: "Current Concentration"
-            font_size: 46
+            Label:
+                text: "Wanted Concentration"
+                font_size: 18  # Adjust the font size as needed
+                size_hint_y: None
+                size_hint_x: 1
+                height: input1.height
 
-        TextInput:
-            id: input3
-            hint_text: "Current Volume"
-            font_size: 46
+            TextInput:
+                id: input1
+                hint_text: "Enter value"
+                size_hint_y: None
+                size_hint_x: 2
+                font_size: 24  # Adjust the font size as needed
 
-        TextInput:
-            id: input4
-            hint_text: "Volume to be Add"
-            font_size: 46
+            Label:
+                text: "Current Concentration"
+                font_size: 18  # Adjust the font size as needed
+                size_hint_y: None
+                height: input2.height
+
+            TextInput:
+                id: input2
+                hint_text: "Enter value"
+                size_hint_y: None
+                size_hint_x: 2
+                font_size: 24  # Adjust the font size as needed
+
+            Label:
+                text: "Current Volume"
+                font_size: 18  # Adjust the font size as needed
+                size_hint_y: None
+                height: input3.height
+
+            TextInput:
+                id: input3
+                hint_text: "Enter value"
+                size_hint_y: None
+                size_hint_x: 2
+                font_size: 24  # Adjust the font size as needed
+
+            Label:
+                text: "Volume to be Add"
+                font_size: 18  # Adjust the font size as needed
+                size_hint_y: None
+                height: input4.height
+
+            TextInput:
+                id: input4
+                hint_text: "Enter value"
+                size_hint_y: None
+                size_hint_x: 2
+                font_size: 24  # Adjust the font size as needed
+
     BoxLayout:
         orientation: 'horizontal'
         spacing: 10
